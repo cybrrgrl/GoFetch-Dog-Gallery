@@ -1,0 +1,145 @@
+.app {
+  text-align: center;
+  padding: 20px;
+  background-color: #A9D8FF;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000; /* Black */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+form {
+  margin-bottom: 20px;
+  background-color: lightgray;
+  color: #000000;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for the form */
+}
+
+label {
+  margin-right: 10px;
+  color: #333333;
+}
+
+input,
+select {
+  margin-right: 10px;
+  padding: 5px;
+  background-color: #FFFFFF;
+  color: #000000; /* Black */
+  border: 1px solid #999999; /* Subtle border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px;
+}
+
+button {
+  padding: 7px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: black;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #FF8FA0; /* Slightly darker pink for hover */
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Added gap to separate images */
+  margin-top: 20px;
+  background-color: #B3E5FC;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Top border */
+  border-left: 1px solid rgba(0, 0, 0, 0.1); /* Left border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 10px;
+  overflow: hidden; /* Rounded content */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.selected-breed {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #333333; /* Neutral gray */
+  font-weight: bold; /* Makes it stand out! */
+}
+
+.image-container {
+  flex: 1 1 150px; /* Ensure a minimum of 150px per image box */
+  max-width: 150px;
+  height: 150px; /* Force uniform height */
+  position: relative;
+  border-right: 1px solid rgba(0, 0, 0, 0.1); /* Vertical border */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Horizontal border */
+  display: flex; /* Center align images within the container */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Clip image corners */
+  border-radius: 10px; /* Rounded corners for each image box */
+  background-color: #FFFFFF; /* White background for the image container */
+  transition: box-shadow 0.3s;
+}
+
+.image-container:hover {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and fill container */
+  border-radius: 10px; /* Rounded corners for images */
+  transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.view-button {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  color: #FFFFFF;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  visibility: hidden;
+  border-radius: 5px; /* Rounded corners for the button */
+  z-index: 10; /* Make sure button appears over the image */
+}
+
+.image-container:hover .view-button {
+  visibility: visible;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.full-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px; /* Rounded corners for the full-size image */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Shadow for full-size image */
+}
